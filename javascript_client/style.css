@@ -1,0 +1,37 @@
+/*label {
+  font-weight: bold;
+}*/
+
+div.box {
+  margin-top: 20px;
+  padding: 25px;
+  border: 2px solid #9e9e9e;
+  background-color: #e8eaf6;
+  width: 700px;
+}
+
+/*body {
+  background-color: #3f51b5;
+  margin: 0;
+  padding: 0;
+}*/
+
+#wrapper {
+  margin: 50px auto;
+  width: 700px;
+}
+
+.glyphicon {
+  color: darkblue;
+}
+
+#progress, #done {
+  display: none;
+}
+
+#submission-form {
+  display: block;
+  padding-left: 250px;
+  padding-right: 250px;
+
+}
