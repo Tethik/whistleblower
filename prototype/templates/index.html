@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-theme.min.css"></link>
+    <link rel="stylesheet" href="/static/style.css"></link>
+
+    <!-- Javascript -->
+    <!-- <script src="/static/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="/static/openpgp.min.js"></script>
+    <script src="/static/keys.js"></script>
+    <script src="/static/app.js"></script>
+  </head>
+  <body onload="load()">
+    <div class="container">
+      <div class="page-header">
+        <h1><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Blow the whistle</h1>
+        <p class="lead">
+          Use the form below to submit sensitive information to our investigators.
+          Using Tor you are not traceable by IP and data is encrypted before submission
+          using PGP.
+        </p>
+      </div>
+
+      <div id="submission-form" class="well">
+
+        <h2>Select Receivers</h2>
+        <p>
+          Select which journalists you wish to receive the content.
+        </p>
+        <div id="receivers" class="checkbox">
+
+        </div>
+
+
+
+
+      <h2>Content</h2>
+      <p>Describe the leak that you are submitting.</p>
+      <div class="form-group">
+        <label for="short-title">
+          Short title
+        </label>
+        <input type="text" class="form-control" id="short-title" name="short-title" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" class="form-control" name="description" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="file">File</label>
+        <input type="file" name="file" id="file-input" multiple>
+        <p class="help-block">Currently we support files of up to 20 Mb.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Contact</label>
+        <span id="helpBlock" class="help-block">If you'd like, tell us how to contact you here.</span>
+        <textarea id="description" class="form-control" name="description"></textarea>
+      </div>
+
+      <p>
+        <input type="submit" class="btn btn-primary" onclick="return upload()" value="Upload">
+      </p>
+
+      <form method="POST" id="form" action="/" enctype="multipart/form-data">
+        <input type="hidden" id="uploaded-file" name="uploaded-file">
+      </form>
+    </div>
+
+
+      <div id="progress" class="well">
+          <p>
+            Please wait while your submission is encrypted and uploaded.
+          </p>
+
+          <div class="progress">
+            <div id="progress-bar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div>
+      </div>
+
+      <div id="done" class="well">
+        <p>Your submission has been received. </p>
+      </div>
+    </div>
+  </body>
+</html>
