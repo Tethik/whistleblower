@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Save" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="53.0" layoutY="46.0" prefHeight="22.0" prefWidth="55.0" text="Git Url" />
+            <Label layoutX="53.0" layoutY="86.0" prefHeight="22.0" prefWidth="199.0" text="Hidden Service Url" />
+            <TextField layoutX="200.0" layoutY="45.0" prefHeight="25.0" prefWidth="328.0" />
+            <TextField layoutX="200.0" layoutY="85.0" prefHeight="25.0" prefWidth="328.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

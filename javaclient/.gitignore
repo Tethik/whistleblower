@@ -1,0 +1,4 @@
+*.pgp
+*.json
+build/
+.gradle/

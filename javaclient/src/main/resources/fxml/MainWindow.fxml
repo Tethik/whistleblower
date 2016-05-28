@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="828.0" stylesheets="/styles/mainwindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.whistleblowerclient2.panes.MainWindowController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="164.0" style="-fx-border-color: #000; -fx-border-width: 0 1 0 0;" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets right="10.0" />
+         </opaqueInsets>
+         <children>
+            <Button id="buttonLeaks" mnemonicParsing="false" onAction="#handleMenuButtonAction" prefHeight="75.0" prefWidth="183.0" text="Leaks" />
+            <Button id="buttonKey" mnemonicParsing="false" onAction="#handleMenuButtonAction" prefHeight="75.0" prefWidth="183.0" text="Key Management" />
+            <Button id="buttonStatus" mnemonicParsing="false" onAction="#handleMenuButtonAction" prefHeight="75.0" prefWidth="183.0" text="Status" />
+            <Button id="buttonSettings" mnemonicParsing="false" onAction="#handleMenuButtonAction" prefHeight="75.0" prefWidth="183.0" text="Settings" />
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="31.0" prefWidth="257.0" style="-fx-border-color: #000;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelTitle" prefHeight="67.0" prefWidth="664.0" text="Title">
+               <padding>
+                  <Insets left="24.0" />
+               </padding>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="paneMain" prefHeight="460.0" prefWidth="664.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
